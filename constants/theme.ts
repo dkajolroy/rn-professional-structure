@@ -24,29 +24,6 @@ const SIZES = {
   height,
 };
 
-//Dark Theme
-export const dark = {
-  //base Colors
-  primary: '#a6c13c', // Green
-  secondary: '#454c5d', // gray
-
-  //Colors
-  black: '#1e1f20',
-  white: '#FFFFFF',
-};
-//Light Theme
-export const light = {
-  //base Colors
-  primary: '#a6c13c', // Green
-  secondary: '#454c5d', // gray
-
-  //Colors
-  black: '#FFFFFF',
-  white: '#1e1f20',
-};
-
-// const COLORS = store.getState().theme.theme;
-
 const FONTS = {
   largeTitle: {fontFamily: 'Robot-Bold', fontSize: SIZES.largeTitle},
   h1: {fontFamily: 'Robot-Bold', fontSize: SIZES.h1, lineHeight: 36},

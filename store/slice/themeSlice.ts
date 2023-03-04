@@ -1,6 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit';
 import {Appearance, ColorSchemeName} from 'react-native';
-import {dark, light} from '../../constants/theme';
+import {dark, light} from '../../constants/colors';
 
 const systemTheme = Appearance.getColorScheme();
 

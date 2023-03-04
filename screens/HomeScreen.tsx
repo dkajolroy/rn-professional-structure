@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button, Text, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
+import {FONTS} from '../constants/theme';
 import {toggleTheme} from '../store/slice/themeSlice';
 import {RootState} from '../store/store';
 export default function HomeScreen() {
@@ -10,16 +11,15 @@ export default function HomeScreen() {
   return (
     <View
       style={{
-        backgroundColor: COLORS.black,
+        backgroundColor: COLORS.white,
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
       }}>
       <Text
         style={{
-          fontFamily: 'Roboto-Bold',
-          fontSize: 30,
-          color: COLORS.white,
+          ...FONTS.largeTitle,
+          color: COLORS.black,
         }}>
         HomeScreen
       </Text>
