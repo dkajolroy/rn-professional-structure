@@ -27,23 +27,25 @@ const SIZES = {
 //Dark Theme
 export const dark = {
   //base Colors
-  primary: 'green', // App Main Colors
-  secondary: 'red', // App Secondary Colors
-  //All Colors
-  text: '#fff',
-  background: '#000',
+  primary: '#a6c13c', // Green
+  secondary: '#454c5d', // gray
+
+  //Colors
+  black: '#1e1f20',
+  white: '#FFFFFF',
 };
 //Light Theme
 export const light = {
   //base Colors
-  primary: 'green', // App Main Colors
-  secondary: 'red', // App Secondary Colors
-  //All Colors
-  text: '#000',
-  background: '#fff',
+  primary: '#a6c13c', // Green
+  secondary: '#454c5d', // gray
+
+  //Colors
+  black: '#FFFFFF',
+  white: '#1e1f20',
 };
 
-const COLORS = {};
+// const COLORS = store.getState().theme.theme;
 
 const FONTS = {
   largeTitle: {fontFamily: 'Robot-Bold', fontSize: SIZES.largeTitle},
@@ -58,3 +60,5 @@ const FONTS = {
   body4: {fontFamily: 'Robot-Regular', fontSize: SIZES.body4, lineHeight: 22},
   body5: {fontFamily: 'Robot-Regular', fontSize: SIZES.body5, lineHeight: 22},
 };
+
+export {SIZES, FONTS};

@@ -1,14 +1,17 @@
 import {createSlice} from '@reduxjs/toolkit';
+import {Appearance, ColorSchemeName} from 'react-native';
 import {dark, light} from '../../constants/theme';
 
+const systemTheme = Appearance.getColorScheme();
+
 type InitType = {
-  name: 'light' | 'dark';
-  theme: typeof light;
+  name: ColorSchemeName;
+  COLORS: typeof light;
 };
 
 const initialState: InitType = {
-  name: 'light',
-  theme: light,
+  name: systemTheme,
+  COLORS: systemTheme === 'light' ? light : dark,
 };
 
 const themeSlice = createSlice({
@@ -17,9 +20,9 @@ const themeSlice = createSlice({
   reducers: {
     toggleTheme: state => {
       if (state.name === 'light') {
-        return {name: 'dark', theme: dark};
+        return {name: 'dark', COLORS: dark};
       } else {
-        return {name: 'light', theme: light};
+        return {name: 'light', COLORS: light};
       }
     },
   },

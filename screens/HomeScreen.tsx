@@ -1,22 +1,25 @@
 import React from 'react';
 import {Button, Text, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
-import {toggleTheme} from '../store/slice/theme';
-import {RootState} from '../store/store';
+import {toggleTheme} from '../store/slice/themeSlice';
+import {RootState, store} from '../store/store';
 export default function HomeScreen() {
   const dispatch = useDispatch();
-  const {theme} = useSelector((state: RootState) => state.theme);
+  const {COLORS} = useSelector((state: RootState) => state.theme);
 
   return (
     <View
       style={{
-        backgroundColor: theme.background,
+        backgroundColor: COLORS.black,
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
       }}>
       <Text
         style={{
           fontFamily: 'Roboto-Bold',
           fontSize: 30,
-          color: theme.text,
+          color: COLORS.white,
         }}>
         HomeScreen
       </Text>
@@ -26,4 +29,5 @@ export default function HomeScreen() {
 }
 
 // User store theme in stylesheet
-// const {theme} = store.getState();
+const {COLORS} = store.getState().theme;
+console.log(COLORS);
