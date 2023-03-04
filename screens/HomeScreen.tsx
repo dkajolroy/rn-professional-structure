@@ -2,7 +2,7 @@ import React from 'react';
 import {Button, Text, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {toggleTheme} from '../store/slice/themeSlice';
-import {RootState, store} from '../store/store';
+import {RootState} from '../store/store';
 export default function HomeScreen() {
   const dispatch = useDispatch();
   const {COLORS} = useSelector((state: RootState) => state.theme);
@@ -27,7 +27,3 @@ export default function HomeScreen() {
     </View>
   );
 }
-
-// User store theme in stylesheet
-const {COLORS} = store.getState().theme;
-console.log(COLORS);
