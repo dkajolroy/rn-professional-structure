@@ -1,5 +1,4 @@
-import {RootStackParamList} from '../interface/NavInterface';
-export const ROUTES: RootStackParamList = {
+export const ROUTES = {
   Home: 'Home',
   Profile: 'Profile',
 };

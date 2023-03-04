@@ -1,12 +1,12 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
-import {RootStackParamList} from '../interface/NavInterface';
+import {ROUTES} from '../constants/routes';
 import HomeScreen from '../screens/HomeScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 
 export default function MainNavigation() {
-  const Stack = createStackNavigator<RootStackParamList>();
+  const Stack = createStackNavigator();
 
   const config = {
     animation: 'spring',
@@ -19,11 +19,12 @@ export default function MainNavigation() {
       restSpeedThreshold: 0.01,
     },
   };
+
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{}}>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Profile" component={ProfileScreen} />
+        <Stack.Screen name={ROUTES.Home} component={HomeScreen} />
+        <Stack.Screen name={ROUTES.Profile} component={ProfileScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
