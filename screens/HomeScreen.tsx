@@ -4,7 +4,8 @@ import {useDispatch, useSelector} from 'react-redux';
 import {FONTS} from '../constants/theme';
 import {toggleTheme} from '../store/slice/themeSlice';
 import {RootState} from '../store/store';
-export default function HomeScreen() {
+
+export default function HomeScreen({navigation}) {
   const dispatch = useDispatch();
   const {COLORS} = useSelector((state: RootState) => state.theme);
 
@@ -24,6 +25,7 @@ export default function HomeScreen() {
         HomeScreen
       </Text>
       <Button title="Theme" onPress={() => dispatch(toggleTheme())} />
+      <Button title="Profile" onPress={() => navigation.navigate('Profile')} />
     </View>
   );
 }
